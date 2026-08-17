@@ -4,7 +4,7 @@ import { viteSingleFile } from 'vite-plugin-singlefile';
 
 // `--mode singlefile` inlines every asset into one portable index.html.
 export default defineConfig(({ mode }) => ({
-  base: './',
+  base: '/four-finger-cam/',
   plugins: [react(), ...(mode === 'singlefile' ? [viteSingleFile()] : [])],
   define: {
     __SINGLEFILE__: JSON.stringify(mode === 'singlefile'),
